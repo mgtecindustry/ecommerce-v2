@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Esentis Care Toilet Tissues Maxi Jumbo 220m",
+    "brand": "Esentis",
+    "description": "Esentis Care Toilet Tissues Maxi Jumbo 220m oferă hârtie igienică de calitate superioară, ideală pentru utilizare intensă în locuri publice sau pentru uz profesional. Fiecare rolă are 220 de metri de hârtie de două foi, asigurând o utilizare eficientă și de durată. Ambalată în pachete de 6 role, produsul este disponibil într-un palet de 48 de pachete. Hârtia este fabricată din materiale reciclabile, garantând un impact redus asupra mediului.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20care%20toilet%20tissues%20maxi%20jumbo%20220m.png",
+    "stock": 100
+  },
+  {
+    "name": "Esentis Clean Professional Toilet Paper Mini Jumbo 120m",
+    "brand": "Esentis",
+    "description": "Esentis Clean Professional Toilet Paper Mini Jumbo 120m oferă hârtie igienică de înaltă calitate, ideală pentru locații cu trafic moderat, cum ar fi birouri și spații comerciale. Fiecare rolă conține 120 metri de hârtie rezistentă și moale, care asigură un consum eficient. Acesta este fabricat din materiale reciclabile, contribuind la protejarea mediului.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20mini%20jumbo%20120m.png",
+    "stock": 100
+  },
+  {
+    "name": "Esentis Clean – Professional Toilet Paper Maxi Jumbo 280m",
+    "brand": "Esentis",
+    "description": "Esentis Clean Professional Toilet Paper Maxi Jumbo 280m este o soluție de înaltă calitate pentru utilizarea intensă în locații publice și instituții. Fiecare rolă are 280 de metri de hârtie, oferind o durabilitate mai mare. Produsul este realizat din materiale reciclabile și asigură confortul utilizatorilor printr-o textură moale și rezistentă. Ambalajul economic include 6 role, iar produsul este disponibil pentru achiziție în cantități mari.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 100
+  },
+  {
+    "name": "Esentis Clean – Professional Toilet Paper Mini Jumbo 100m",
+    "brand": "Esentis",
+    "description": "Esentis Clean Professional Toilet Paper Maxi Jumbo 100m este o soluție de înaltă calitate pentru utilizarea intensă în locații publice și instituții. Fiecare rolă are 280 de metri de hârtie, oferind o durabilitate mai mare. Produsul este realizat din materiale reciclabile și asigură confortul utilizatorilor printr-o textură moale și rezistentă. Ambalajul economic include 6 role, iar produsul este disponibil pentru achiziție în cantități mari.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 100
+  },
+  {
+    "name": "Esentis Clean – Professional Toilet Paper Mini Jumbo 112m",
+    "brand": "Esentis",
+    "description": "Esentis Clean Professional Toilet Paper Maxi Jumbo 112m este o soluție de înaltă calitate pentru utilizarea intensă în locații publice și instituții. Fiecare rolă are 280 de metri de hârtie, oferind o durabilitate mai mare. Produsul este realizat din materiale reciclabile și asigură confortul utilizatorilor printr-o textură moale și rezistentă. Ambalajul economic include 6 role, iar produsul este disponibil pentru achiziție în cantități mari.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 100
+  },
+  {
+    "name": "Esentis Clean – Professional Toilet Paper Mini Jumbo 150m",
+    "brand": "Esentis",
+    "description": "Esentis Clean Professional Toilet Paper Maxi Jumbo 150m este o soluție de înaltă calitate pentru utilizarea intensă în locații publice și instituții. Fiecare rolă are 280 de metri de hârtie, oferind o durabilitate mai mare. Produsul este realizat din materiale reciclabile și asigură confortul utilizatorilor printr-o textură moale și rezistentă. Ambalajul economic include 6 role, iar produsul este disponibil pentru achiziție în cantități mari.",
+    "price": 50,
+    "category": "hârtie igienică",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 100
+  },
+  {
+    "name": "Săpun Natural cu Lavandă 250g",
+    "brand": "Esentis",
+    "description": "Săpunul natural cu lavandă oferă o experiență de curățare delicată, lăsând pielea hidratată și parfumată. Ideal pentru utilizare zilnică.",
+    "price": 30,
+    "category": "săpun",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 200
+  },
+  {
+    "name": "Șervețele Umede cu Aloe Vera 80 buc",
+    "brand": "Esentis",
+    "description": "Șervețelele umede cu aloe vera sunt perfecte pentru curățarea rapidă și eficientă a pielii, lăsând-o proaspătă și hidratată.",
+    "price": 25,
+    "category": "șervețele umede",
+    "image": "https://oqjgdpuknnexaacahemq.supabase.co/storage/v1/object/public/images/esentis%20clean%20-%20professional%20toilet%20paper%20maxi%20jumbo%20280m.png",
+    "stock": 150
+  }
+]
