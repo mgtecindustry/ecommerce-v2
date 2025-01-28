@@ -25,6 +25,7 @@ interface BasketItem {
 }
 
 interface OrderData {
+  numarComanda: string;
   nume: string;
   email: string;
   adresa: string;
@@ -32,7 +33,8 @@ interface OrderData {
   telefon: string;
   judet: string;
   codPostal: string;
-  tipCurier: string;
+  curier: string;
+  totalAmount: number;
   products: BasketItem[];
 }
 
@@ -55,6 +57,7 @@ export default function SuccessPage() {
       if (!storedOrderData) return;
 
       const parsedOrderData = JSON.parse(storedOrderData) as OrderData;
+      console.log(parsedOrderData);
       setOrderData(parsedOrderData);
 
       try {
@@ -65,7 +68,7 @@ export default function SuccessPage() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            orderNumber: orderNumber,
+            orderNumber: parsedOrderData.numarComanda,
             numeClient: parsedOrderData.nume,
             emailClient: parsedOrderData.email,
             adresaClient: parsedOrderData.adresa,
@@ -73,7 +76,7 @@ export default function SuccessPage() {
             telefonClient: parsedOrderData.telefon,
             judetClient: parsedOrderData.judet,
             codPostalClient: parsedOrderData.codPostal,
-            tipCurier: parsedOrderData.tipCurier,
+            tipCurier: parsedOrderData.curier,
             products: parsedOrderData.products.map((item: BasketItem) => ({
               productId: item.product._id,
               quantity: item.quantity,

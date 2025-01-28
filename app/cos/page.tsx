@@ -23,6 +23,7 @@ const roboto = Roboto({
 
 // Definirea tipului pentru orderData
 interface IOrderData {
+  numarComanda: string;
   nume: string;
   telefon: string;
   email: string;
@@ -128,6 +129,7 @@ function CartPage() {
 
         // Salvează datele comenzii în localStorage pentru referință ulterioară
         const orderData: IOrderData = {
+          numarComanda: metadata.orderNumber,
           nume: checkoutState.formData.nume ?? "Unknown",
           telefon: checkoutState.formData.telefon ?? "Telefon necunoscut",
           email: checkoutState.formData.email ?? "Unknown",
@@ -145,7 +147,6 @@ function CartPage() {
         };
         localStorage.setItem("orderData", JSON.stringify(orderData));
         console.log(orderData);
-        await new Promise((resolve) => setTimeout(resolve, 5000)); // Așteaptă 5 secunde
 
         // Trimite datele către backend pentru a le salva în MongoDB
         await saveOrderToDatabase(orderData);

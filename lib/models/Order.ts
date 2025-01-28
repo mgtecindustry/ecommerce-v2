@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 interface IOrder {
+  numarComanda: string;
   nume: string;
   telefon: string;
   email: string;
@@ -14,6 +15,7 @@ interface IOrder {
 }
 
 const orderSchema = new Schema<IOrder>({
+  numarComanda: { type: String, required: true },
   nume: { type: String, required: true },
   telefon: { type: String, required: true },
   email: { type: String, required: true },
