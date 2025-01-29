@@ -24,7 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className="antialiased min-h-screen flex flex-col justify-between">
-          <main className="flex-grow">
+          <main className="flex-grow min-h-screen">
             <Header />
             {children}
           </main>

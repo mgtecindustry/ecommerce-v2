@@ -52,7 +52,10 @@ const useBasketStore = create<BasketState>()(
             return acc;
           }, [] as BasketItem[]),
         })),
-      clearBasket: () => set({ items: [] }),
+      clearBasket: () => {
+        set({ items: [] });
+        localStorage.removeItem("basketStore");
+      },
       getTotalPrice: () => {
         return get().items.reduce(
           (total, item) => total + (item.product.price ?? 0) * item.quantity,
@@ -71,7 +74,7 @@ const useBasketStore = create<BasketState>()(
       },
     }),
     {
-      name: "basket store",
+      name: "basketStore",
     }
   )
 );

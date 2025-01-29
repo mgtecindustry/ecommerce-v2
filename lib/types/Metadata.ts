@@ -2,7 +2,7 @@ export interface Metadata {
   orderNumber: string;
   customerName: string;
   customerEmail: string;
-  clerkUserId: string;
+  userId: string;
   adresa: string;
   judet: string;
   oras: string;

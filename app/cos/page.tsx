@@ -24,6 +24,7 @@ const roboto = Roboto({
 // Definirea tipului pentru orderData
 interface IOrderData {
   numarComanda: string;
+  userId: string;
   nume: string;
   telefon: string;
   email: string;
@@ -37,9 +38,8 @@ interface IOrderData {
 }
 
 function CartPage() {
-  const { isSignedIn } = useAuth();
+  const { isSignedIn, userId } = useAuth();
   const basketStore = useBasketStore();
-  const { user } = useUser();
   const router = useRouter();
   const groupedItems = basketStore.getGroupedItems();
   const courier = CheckoutStore((state) => state.courier);
@@ -108,7 +108,7 @@ function CartPage() {
         orderNumber: uuidv4(),
         customerName: checkoutState.formData.nume ?? "Unknown",
         customerEmail: checkoutState.formData.email ?? "Unknown",
-        clerkUserId: user!.id,
+        userId: userId,
         adresa: checkoutState.formData.adresa ?? "Adresă necunoscută",
         judet: checkoutState.formData.judet ?? "Județ necunoscut",
         oras: checkoutState.formData.oras ?? "Oraș necunoscut",
@@ -130,6 +130,7 @@ function CartPage() {
         // Salvează datele comenzii în localStorage pentru referință ulterioară
         const orderData: IOrderData = {
           numarComanda: metadata.orderNumber,
+          userId: metadata.userId,
           nume: checkoutState.formData.nume ?? "Unknown",
           telefon: checkoutState.formData.telefon ?? "Telefon necunoscut",
           email: checkoutState.formData.email ?? "Unknown",
@@ -146,12 +147,10 @@ function CartPage() {
           })),
         };
         localStorage.setItem("orderData", JSON.stringify(orderData));
-        console.log(orderData);
 
         // Trimite datele către backend pentru a le salva în MongoDB
         await saveOrderToDatabase(orderData);
-
-        window.location.href = checkoutUrl; // Redirecționează către Stripe
+        window.location.href = checkoutUrl;
       } else {
         console.error("Eroare la crearea sesiunii de checkout");
       }

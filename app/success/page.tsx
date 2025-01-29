@@ -7,6 +7,7 @@ import Link from "next/link";
 import useBasketStore from "@/store/store";
 
 import { Roboto } from "next/font/google";
+import { CheckoutStore } from "@/store/checkoutStore";
 
 // Mută declararea fontului aici, la nivel de modul (în afara componentei)
 const roboto = Roboto({
@@ -26,6 +27,7 @@ interface BasketItem {
 
 interface OrderData {
   numarComanda: string;
+  userId: string;
   nume: string;
   email: string;
   adresa: string;
@@ -42,15 +44,19 @@ export default function SuccessPage() {
   const searchParams = useSearchParams();
   const orderNumber = searchParams.get("orderNumber");
   const clearBasket = useBasketStore((state) => state.clearBasket);
-
   const [orderData, setOrderData] = useState<OrderData | null>(null);
+
+  const clearStorageData = () => {
+    localStorage.removeItem("formData");
+    localStorage.removeItem("orderData");
+    clearBasket();
+  };
 
   useEffect(() => {
     const saveOrder = async () => {
       if (!orderNumber) return;
 
       // Curăță coșul de cumpărături
-      clearBasket();
 
       // Obține datele din localStorage
       const storedOrderData = localStorage.getItem("orderData");
@@ -69,6 +75,7 @@ export default function SuccessPage() {
           },
           body: JSON.stringify({
             orderNumber: parsedOrderData.numarComanda,
+            userId: parsedOrderData.userId,
             numeClient: parsedOrderData.nume,
             emailClient: parsedOrderData.email,
             adresaClient: parsedOrderData.adresa,
@@ -87,17 +94,14 @@ export default function SuccessPage() {
         if (!response.ok) {
           throw new Error("Eroare la salvarea comenzii");
         }
-
-        // Șterge datele din localStorage după ce comanda a fost salvată cu succes
-        localStorage.removeItem("orderData");
       } catch (error) {
         console.error("Eroare la salvarea comenzii:", error);
         // Aici poți adăuga logică pentru gestionarea erorilor (de exemplu, afișarea unui mesaj către utilizator)
       }
     };
-
     saveOrder();
-  }, [orderNumber, clearBasket]);
+    clearStorageData();
+  }, [orderNumber]);
 
   return (
     <div
